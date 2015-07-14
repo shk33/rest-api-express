@@ -1,0 +1,31 @@
+{
+  "name": "rest-api-express",
+  "version": "1.0.0",
+  "description": "An example REST Api built with express for learning porpuses",
+  "main": "express.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shk33/rest-api-express.git"
+  },
+  "keywords": [
+    "express",
+    "rest",
+    "api",
+    "node",
+    "mocha"
+  ],
+  "author": "Azat Modified by Miguel Coronel",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/shk33/rest-api-express/issues"
+  },
+  "homepage": "https://github.com/shk33/rest-api-express#readme",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^1.18.2",
+    "superagent": "^0.17.0"
+  }
+}
