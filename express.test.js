@@ -35,7 +35,21 @@ describe('express rest api server', function () {
       .end(function (err, res) {
         expect(e).to.eql(null);
         expect(res.body.length).to.be.above(0);
-        expect(res.body.map(function (item) { return item._id })).to.contain(id);;
+        expect(res.body.map(function (item) { return item._id; })).to.contain(id);
+        done();
+      });
+  });
+
+  it('updates an object', function (done) {
+    superagent.put('http://localhost:3000/collections/test/'+id)
+      .send({
+        name: 'Peter',
+        email: 'peter@yahoo.com' 
+      })
+      .end(function (err, res) {
+        expect(err).to.eql(null);
+        expect(typeof res.body).to.eql('object');
+        expect(res.body.message).to.eql('success');
         done();
       });
   });
