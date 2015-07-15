@@ -24,8 +24,8 @@ describe('express rest api server', function () {
       .end(function (err, res) {
         expect(err).to.eql(null);
         expect(typeof res.body).to.eql('object');
-        expect(res.body.id._length).to.eql(24);
-        expect(res.body.id).to.eql(id);
+        expect(res.body._id.length).to.eql(24);
+        expect(res.body._id).to.eql(id);
         done();
       });
   });
@@ -33,7 +33,7 @@ describe('express rest api server', function () {
   it('retrives a collection', function (done) {
     superagent.get('http://localhost:3000/collections/test')
       .end(function (err, res) {
-        expect(e).to.eql(null);
+        expect(err).to.eql(null);
         expect(res.body.length).to.be.above(0);
         expect(res.body.map(function (item) { return item._id; })).to.contain(id);
         done();
@@ -49,7 +49,7 @@ describe('express rest api server', function () {
       .end(function (err, res) {
         expect(err).to.eql(null);
         expect(typeof res.body).to.eql('object');
-        expect(res.body.message).to.eql('success');
+        expect(res.body.msg).to.eql('success');
         done();
       });
   });
@@ -72,7 +72,7 @@ describe('express rest api server', function () {
       end(function (err, res) {
         expect(err).to.eql(null);
         expect(typeof res.body).to.eql('object');
-        expect(res.body.message).to.eql('success');
+        expect(res.body.msg).to.eql('success');
         done();
       });
   });

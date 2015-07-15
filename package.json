@@ -4,7 +4,8 @@
   "description": "An example REST Api built with express for learning porpuses",
   "main": "express.js",
   "scripts": {
-    "test": "none"
+    "start": "node express.js",
+    "test": "mocha express.test.js"
   },
   "repository": {
     "type": "git",
@@ -24,14 +25,14 @@
   },
   "homepage": "https://github.com/shk33/rest-api-express#readme",
   "devDependencies": {
-    "expect.js": "^0.3.1",
-    "mocha": "^1.18.2",
-    "superagent": "^0.17.0"
+    "expect.js": "0.3.1",
+    "mocha": "^2.0.1",
+    "superagent": "0.20.0"
   },
   "dependencies": {
     "body-parser": "1.9.2",
     "morgan": "1.5.0",
-    "express": "^4.8.1",
-    "mongoskin": "^1.4.1"
+    "express": "4.10.1",
+    "mongoskin": "1.4.4"
   }
 }
